@@ -1,0 +1,19 @@
+{
+  "name": "SIGAA IFSUDESTE-MG",
+  "version": "1.1",
+  "description": "Melhorias de UI/UX no SIGAA da IFSUDESTE-MG",
+  "content_scripts": [
+    {
+      "js": ["main.js"],
+      "matches": ["https://sig.ifsudestemg.edu.br/*"]
+    }
+  ],
+  "icons": {
+    "16": "imgs/mdpi.png",
+    "32": "imgs/xhdpi.png",
+    "48": "imgs/xxhdpi.png",
+    "128": "imgs/xxxhdpi.png"
+  },
+  "author": "Turma de LPV 2021",
+  "manifest_version": 1
+}
