@@ -4,3 +4,4 @@ const LOGIN = document.querySelector("#conteudo > .logon");
 const RODAPE = document.querySelector("#container > #rodape");
 const CONTEUDO = document.querySelector("#container > #conteudo");
 const INFO_USUARIO = document.querySelector("#painel-usuario > #info-usuario");
+const NOTICIAS = document.querySelector("#main-docente #noticias-portal");
