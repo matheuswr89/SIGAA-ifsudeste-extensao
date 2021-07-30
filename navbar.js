@@ -9,6 +9,9 @@ if (TURMAS_PORTAL != null) {
   let conteudoNavbar = `
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
+#sidebar-navs div table tbody tr, #sidebar-navs div table tbody tr td{
+  background:rgb(196,210,235) !important; 
+}
 #info-usuario{
   margin-left: 60px;
 }
@@ -20,7 +23,7 @@ if (TURMAS_PORTAL != null) {
 .navbar-wrapper .menu-btn{
   position: absolute;
   left: 10px;
-  top: 20px;
+  top: 21px;
   background: #4a4a4a;
   color: #fff;
   height: 45px;
@@ -55,7 +58,7 @@ if (TURMAS_PORTAL != null) {
 }
 #sidebar-navs {
   position: fixed;
-  background: rgb(239,235,222);
+  background: rgb(196,210,235);
   height: 100%;
   text-align: left;
   width: 200px;
@@ -68,15 +71,18 @@ if (TURMAS_PORTAL != null) {
 }
 #sidebar-navs .list-items {
   color: black;
-  margin:50px 0 0 -20px;
+  font-weight: bold;
+  margin: 50px 0 0 -40px;
   width: 100%;
   height: 100%;
-  font-size: 12px;
+  font-size: 13px;
 }
 #sidebar-navs .list-items .menu-li{
   margin: 20px 0 0 -30px;
 }
-
+.list-items a{
+  color: black;
+}
 #sidebar-navs .list-items .modal-li{
   margin: 20px 0 0 9px;
   cursor: pointer;
@@ -102,6 +108,7 @@ if (TURMAS_PORTAL != null) {
   border: 1px solid #888;
   width: 350px;
   height: 550px;
+  text-align: left;
 }
 .close {
   color: #aaaaaa;
@@ -111,10 +118,14 @@ if (TURMAS_PORTAL != null) {
 }
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
+.simple-panel > h4{
+  font-size: 14px !important;
+}
+
 </style>
     <div class="navbar-wrapper">
         <input type="checkbox" id="btn" hidden>
@@ -137,12 +148,10 @@ if (TURMAS_PORTAL != null) {
   $("body").append(conteudoNavbar);
   $("body").append(CONTAINER);
   PERFIL_DOCENTE.style.display = "none";
-  PERFIL_DOCENTE.remove();
-
   let modal = document.getElementById("myModal");
   let btn = document.getElementById("myBtn");
   let span = document.getElementsByClassName("close")[0];
-  
+
   btn.onclick = function () {
     modal.style.display = "block";
   };

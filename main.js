@@ -16,6 +16,6 @@ if (CONTAINER != null) {
   CONTAINER.style.fontSize = "70%";
 }
 //Diminui a fonte na pagina de uma disciplina
-if (ALL[0].querySelector("#barraEsquerda") != null) {
+if (ALL[0].querySelector("#baseLayout") != null) {
   ALL[0].style.fontSize = "0.7em";
 }

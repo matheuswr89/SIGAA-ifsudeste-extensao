@@ -9,7 +9,8 @@
         "main.js",
         "otherJS/jquery-3.6.0.min.js",
         "cards.js",
-        "navbar.js"
+        "navbar.js",
+        "kanban.js"
       ],
       "matches": ["https://sig.ifsudestemg.edu.br/*"]
     }
@@ -21,5 +22,5 @@
     "128": "imgs/xxxhdpi.png"
   },
   "author": "Turma de LPV 2021",
-  "manifest_version": 2
+  "manifest_version": 3
 }
