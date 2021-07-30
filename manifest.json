@@ -5,12 +5,12 @@
   "content_scripts": [
     {
       "js": [
-        "selects.js",
-        "main.js",
-        "otherJS/jquery-3.6.0.min.js",
-        "cards.js",
-        "navbar.js",
-        "kanban.js"
+        "js/selects.js",
+        "js/main.js",
+        "js/otherJS/jquery-3.6.0.min.js",
+        "js/cards.js",
+        "js/navbar.js",
+        "js/kanban.js"
       ],
       "matches": ["https://sig.ifsudestemg.edu.br/*"]
     }
@@ -22,5 +22,5 @@
     "128": "imgs/xxxhdpi.png"
   },
   "author": "Turma de LPV 2021",
-  "manifest_version": 3
+  "manifest_version": 2
 }
