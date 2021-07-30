@@ -1,6 +1,9 @@
 if (TURMAS_PORTAL != null) {
   let conteudo = `
     <style>
+    *{
+      box-sizing: border-box;
+    }
     #main-docente{
       width: 100%;
       justify-content: center;
@@ -19,7 +22,7 @@ if (TURMAS_PORTAL != null) {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       width: 40%;
-      height: 80px;
+      height: 120px;
       border-radius: 5px;
     }
     .card:hover {
@@ -105,7 +108,6 @@ if (TURMAS_PORTAL != null) {
     }
   }
   conteudo += `</div><p class="span-turmas-anteriores">${TURMAS_PORTAL.children[4].innerHTML}</p>`;
-  console.log(TURMAS_PORTAL.children[3]);
   $("#turmas-portal").append(conteudo);
   TURMAS_PORTAL.children[1].style.display = "none";
   TURMAS_PORTAL.children[2].style.display = "none";

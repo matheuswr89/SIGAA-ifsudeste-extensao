@@ -4,7 +4,13 @@
   "description": "Melhorias de UI/UX no SIGAA da IFSUDESTE-MG",
   "content_scripts": [
     {
-      "js": ["selects.js","main.js","jquery-3.6.0.min.js", "modal.js", "cards.js"],
+      "js": [
+        "selects.js",
+        "main.js",
+        "otherJS/jquery-3.6.0.min.js",
+        "cards.js",
+        "navbar.js"
+      ],
       "matches": ["https://sig.ifsudestemg.edu.br/*"]
     }
   ],
