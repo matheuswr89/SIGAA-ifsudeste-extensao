@@ -12,7 +12,9 @@ Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste
 <br>
 <h3>2º Opção:</h3>
 <li>Baixe a extensão nas lojas:
-  <li>Firefox: <a href="https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/">acessar</a></li>
+  <ul>
+    <li>Firefox: <a href="https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/">acessar</a></li>
+  </ul>
 </li>
 <br>
 <h3>OBS.: ESTÁ EM DESENVOLVIMENTO</h3>
