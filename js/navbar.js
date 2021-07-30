@@ -6,11 +6,19 @@ if (TURMAS_PORTAL != null) {
   );
   menu.querySelector("div > table > tbody > tr").style.display = "grid";
   menu.querySelector("div").style.color = "black";
+  let menus = menu.querySelectorAll("td span img");
+  for (let i = 0; i < menus.length; i++) {
+    menus[i].remove();
+  }
+
   let conteudoNavbar = `
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <style>
 #sidebar-navs div table tbody tr, #sidebar-navs div table tbody tr td{
-  background:rgb(196,210,235) !important; 
+  background:rgb(196,210,235) !important;
+}
+#sidebar-navs > ul > li > div > table > tbody > tr > td{
+  border-bottom: 2px solid #A9A9A9; 
 }
 #info-usuario{
   margin-left: 60px;
@@ -78,13 +86,19 @@ if (TURMAS_PORTAL != null) {
   font-size: 13px;
 }
 #sidebar-navs .list-items .menu-li{
-  margin: 20px 0 0 -30px;
+  margin: 0 0 0 -33px;
+  width: 200px;
+}
+#sidebar-navs .list-items .menu-li ul li{
+  padding: 2px 0 2px 0 !important;
+  border-bottom: 2px solid #A9A9A9;
 }
 .list-items a{
   color: black;
 }
 #sidebar-navs .list-items .modal-li{
-  margin: 20px 0 0 9px;
+  margin: 0 0 0 8px;
+  padding: 2px 0 2px 0 !important;
   cursor: pointer;
 }
 .modal {

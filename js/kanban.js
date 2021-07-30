@@ -69,6 +69,7 @@ if (TURMAS_PORTAL != null) {
       background-color: #1dd1a1;
   }
   .task {
+      cursor: pointer;
       background-color: white;
       margin: 0.2rem 0rem 0.3rem 0rem;
       border: 0.1rem solid black;
@@ -102,8 +103,6 @@ if (TURMAS_PORTAL != null) {
         <div class="kanban-board">
   `;
 
-
-
   conteudoAtividades += `
   <div class="kanban-block" id="todo">
     <strong>Demais Atividades</strong>
@@ -112,8 +111,14 @@ if (TURMAS_PORTAL != null) {
   for (let i = 0; i < arrayAtividades.length; i++) {
     if (arrayAtividades[i][0] == null) {
       conteudoAtividades += `
-          <div class="task">
-            <p class="datas-task">${arrayAtividades[i][1]} - ${arrayAtividades[i][2]}</p>
+          <div class="task" onclick="${
+            arrayAtividades[i][3].querySelector("a") != null
+              ? arrayAtividades[i][3].querySelector("a").getAttribute("onclick")
+              : null
+          }">
+            <p class="datas-task">${arrayAtividades[i][1]} - ${
+        arrayAtividades[i][2]
+      }</p>
             ${arrayAtividades[i][3].innerHTML}
           </div>
       `;
@@ -130,8 +135,14 @@ if (TURMAS_PORTAL != null) {
       arrayAtividades[i][0].includes("vermelho")
     ) {
       conteudoAtividades += `
-          <div class="task">
-            <p class="datas-task">${arrayAtividades[i][1]} - ${arrayAtividades[i][2]}</p>
+          <div class="task" onclick="${
+            arrayAtividades[i][3].querySelector("a") != null
+              ? arrayAtividades[i][3].querySelector("a").getAttribute("onclick")
+              : null
+          }">
+            <p class="datas-task">${arrayAtividades[i][1]} - ${
+        arrayAtividades[i][2]
+      }</p>
             ${arrayAtividades[i][3].innerHTML}
           </div>
       `;
@@ -148,8 +159,14 @@ if (TURMAS_PORTAL != null) {
       arrayAtividades[i][0].includes("verde")
     ) {
       conteudoAtividades += `
-          <div class="task">
-            <p class="datas-task">${arrayAtividades[i][1]} - ${arrayAtividades[i][2]}</p>
+          <div class="task" onclick="${
+            arrayAtividades[i][3].querySelector("a") != null
+              ? arrayAtividades[i][3].querySelector("a").getAttribute("onclick")
+              : null
+          }">
+            <p class="datas-task">${arrayAtividades[i][1]} - ${
+        arrayAtividades[i][2]
+      }</p>
             ${arrayAtividades[i][3].innerHTML}
           </div>
       `;

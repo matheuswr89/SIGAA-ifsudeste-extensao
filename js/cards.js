@@ -24,6 +24,7 @@ if (TURMAS_PORTAL != null) {
       width: 40%;
       height: 120px;
       border-radius: 5px;
+      cursor: pointer;
     }
     .card:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -82,7 +83,7 @@ if (TURMAS_PORTAL != null) {
       let local = children.querySelectorAll("td.info")[0].innerText;
       let horario = children.querySelectorAll("td.info")[1].innerText;
       conteudo += `
-        <div class="card">
+        <div class="card" onclick="${nomes.querySelector("a").getAttribute("onclick")}">
         <div class="card-container">
         <h4>${nomes.innerHTML}</h4>
         <p><b>Local:</b> ${local}</p>
