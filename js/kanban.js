@@ -23,8 +23,7 @@ if (TURMAS_PORTAL != null) {
   let conteudoAtividades = `
   <style>
   .kaban-container {
-      width: 70%;
-      min-width: 50%;
+      width: 100%;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -32,6 +31,7 @@ if (TURMAS_PORTAL != null) {
   .kanban-board {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;  
       justify-content: space-between;
       font-family: sans-serif;
   }

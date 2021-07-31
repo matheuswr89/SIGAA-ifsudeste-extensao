@@ -10,7 +10,8 @@
         "js/main.js",
         "js/cards.js",
         "js/navbar.js",
-        "js/kanban.js"
+        "js/kanban.js",
+        "js/comunidade.js"
       ],
       "matches": ["https://sig.ifsudestemg.edu.br/*"]
     }

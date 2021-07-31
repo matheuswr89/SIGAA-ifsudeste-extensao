@@ -9,3 +9,5 @@ const NOTICIAS = document.querySelector("#main-docente #noticias-portal");
 const TURMAS_PORTAL = document.querySelector("#turmas-portal");
 const PERFIL_DOCENTE = document.querySelector("#perfil-docente");
 const TABELA_ATIVIDADES = document.querySelector("#avaliacao-portal > table");
+const TABELA_COMUNIDADES = document.querySelector("#participantes");
+const TABELA_FORUM = document.querySelector("#forum-portal");

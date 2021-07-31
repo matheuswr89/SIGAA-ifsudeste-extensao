@@ -37,14 +37,14 @@ if (TURMAS_PORTAL != null) {
       height: 40px;
     }
     .ultimas-atualizacoes-card::-webkit-scrollbar {
-      width: 12px;
+      width: 5px;
     }
     .ultimas-atualizacoes-card::-webkit-scrollbar-track {
-      background: #A9A9A9;
+      background: #FFF;
       border-radius: 20px;
     }
     .ultimas-atualizacoes-card::-webkit-scrollbar-thumb {
-      background-color: #000000;
+      background-color: #A9A9A9;
       border-radius: 20px;
     }
     .span-turmas-anteriores{
