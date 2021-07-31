@@ -86,7 +86,6 @@ if (TURMAS_PORTAL != null) {
   for (let i = 0; i < arrayForuns.length; i++) {
     let forums = arrayForuns[i];
     if (forums != null) {
-      console.log(forums[1]);
       conteudoForum += `
       <div class="card-comunidade" onclick="${forums[0].getAttribute(
         "onclick"

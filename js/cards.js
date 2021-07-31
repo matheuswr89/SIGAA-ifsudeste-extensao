@@ -14,16 +14,14 @@ if (TURMAS_PORTAL != null) {
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
-      align-items: center
+      align-items: center;
     }
     .card {
-      margin: 10px;
-      padding: 25px;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
+      padding: 8px;
+      margin: 10px;
       width: 40%;
-      height: 120px;
-      border-radius: 5px;
       cursor: pointer;
     }
     .card:hover {
@@ -31,6 +29,9 @@ if (TURMAS_PORTAL != null) {
     }
     .card-container {
       padding: 2px 16px;
+    }
+    .card .card-container h4{
+      margin: 0 !important;
     }
     .ultimas-atualizacoes-card{
       overflow-y: auto;
@@ -83,7 +84,9 @@ if (TURMAS_PORTAL != null) {
       let local = children.querySelectorAll("td.info")[0].innerText;
       let horario = children.querySelectorAll("td.info")[1].innerText;
       conteudo += `
-        <div class="card" onclick="${nomes.querySelector("a").getAttribute("onclick")}">
+        <div class="card" onclick="${nomes
+          .querySelector("a")
+          .getAttribute("onclick")}">
         <div class="card-container">
         <h4>${nomes.innerHTML}</h4>
         <p><b>Local:</b> ${local}</p>
