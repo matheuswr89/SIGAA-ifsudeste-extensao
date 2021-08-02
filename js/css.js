@@ -231,20 +231,20 @@ const css = `
   min-height: 4.5rem;
   border-radius: 0.3rem;
 }
-#todo, #inprogress, #done{
+#todo, #inprogress, #done, #prox{
 height: 300px;
 overflow: auto;
 text-size: 14px !important;
 color: black !important;
 }
-#todo::-webkit-scrollbar, #inprogress::-webkit-scrollbar, #done::-webkit-scrollbar {
+#todo::-webkit-scrollbar, #inprogress::-webkit-scrollbar, #done::-webkit-scrollbar,#prox::-webkit-scrollbar {
 width: 5px;
 }
-#todo::-webkit-scrollbar-track, #inprogress::-webkit-scrollbar-track, #done::-webkit-scrollbar-track {
+#todo::-webkit-scrollbar-track, #inprogress::-webkit-scrollbar-track, #done::-webkit-scrollbar-track,#prox::-webkit-scrollbar-track {
 background: #FFF;
 border-radius: 20px;
 }
-#todo::-webkit-scrollbar-thumb, #inprogress::-webkit-scrollbar-thumb, #done::-webkit-scrollbar-thumb {
+#todo::-webkit-scrollbar-thumb, #inprogress::-webkit-scrollbar-thumb, #done::-webkit-scrollbar-thumb ,#prox::-webkit-scrollbar-thumb {
 background-color: #A9A9A9;
 border-radius: 20px;
 }
@@ -256,6 +256,9 @@ border-radius: 20px;
 }
 #done .task{
   background-color: #1dd1a1;
+}
+#prox .task{
+  background-color: #C0C0C0;
 }
 .task {
   cursor: pointer;
