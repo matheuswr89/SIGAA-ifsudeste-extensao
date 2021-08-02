@@ -22,12 +22,11 @@ Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste
     <li>Entre no <a href="https://sig.ifsudestemg.edu.br">SIGAA</a> e veja a magica acontecer.</li>
   </ul>
 </li>
-<br>
 <h3>2º Opção:</h3>
 <li>Baixe a extensão nas lojas:
   <ul>
     <li>Firefox: <a href="https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/">acessar</a></li>
+    <li>Chrome: esperando aprovação</li>
   </ul>
 </li>
-<br>
 <h3>OBS.: ESTÁ EM DESENVOLVIMENTO</h3>
