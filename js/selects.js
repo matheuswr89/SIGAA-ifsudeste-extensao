@@ -11,3 +11,5 @@ const PERFIL_DOCENTE = document.querySelector("#perfil-docente");
 const TABELA_ATIVIDADES = document.querySelector("#avaliacao-portal > table");
 const TABELA_COMUNIDADES = document.querySelector("#participantes");
 const TABELA_FORUM = document.querySelector("#forum-portal");
+const TABELAS_VARIADAS = document.querySelector("#scroll-wrapper > form");
+const TABELAS_JANELA_FORUM = document.querySelector("#scroll-wrapper > fieldset > form");

@@ -21,35 +21,6 @@ if (TURMAS_PORTAL != null) {
     arrayForuns.push([titulo, autor, respostas, data]);
   }
   let conteudoComunidade = `
-  <style>
-  .card-comunidade {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    padding: 8px;
-    margin: 10px;
-    width: 60%;
-    cursor: pointer;
-  }
-  .card-comunidade p{
-    width: 100%;
-  }
-  .container-card-comunidade .link{
-    font-size: 13px;
-    color: #003395;
-  }
-  .conteudoComunidade h4, .conteudoForum h4{
-    text-transform:uppercase;
-  }
-  .container-card-comunidade span{
-    font-weight: bold;
-  }
-  .card-comunidade:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  .container-card-comunidade {
-    padding: 2px 16px;
-  }
-  </style>
   <div class="conteudoComunidade">
   <h4>${TABELA_COMUNIDADES.querySelector("h4").innerHTML}</h4>
   <div class="container-comunidade">`;

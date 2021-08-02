@@ -19,15 +19,16 @@ if (CONTAINER != null) {
 //Diminui a fonte na pagina de uma disciplina
 if (ALL[0].querySelector("#baseLayout") != null) {
   ALL[0].style.fontSize = "0.7em";
+  let icon = `<i class="fas fa-download" style="float:left;font-size: 1rem;padding: 0 5px 0 0;"></i>`;
   let images = ALL[0].querySelectorAll("img");
   for (let i = 0; i < images.length; i++) {
-    if (images[i].getAttribute("src").includes("/sigaa/img/view.gif")) {
-      images[i].removeAttribute("src");
-      images[i].setAttribute(
-        "src",
-        "https://img.icons8.com/pastel-glyph/64/000000/download--v1.png"
-      );
-      images[i].style.width = "30px";
+    if (
+      images[i].getAttribute("src").includes("/sigaa/img/view.gif") ||
+      images[i].getAttribute("src").includes("/sigaa/ava/img/zoom.png")
+    ) {
+      let parent = images[i].parentNode;
+      parent.removeChild(images[i]);
+      $(parent).append(icon);
     }
   }
 }
