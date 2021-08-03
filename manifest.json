@@ -1,6 +1,6 @@
 {
   "name": "SIGAA IFSUDESTE-MG",
-  "version": "1.6",
+  "version": "1.7",
   "description": "Melhorias de UI/UX no SIGAA da IFSUDESTE-MG",
   "content_scripts": [
     {
@@ -10,10 +10,14 @@
         "js/css.js",
         "js/main.js",
         "js/cards.js",
+        "js/icones.js",
         "js/navbar.js",
         "js/kanban.js",
+        "js/youtube.js",
         "js/comunidade.js",
+        "js/tempoSessao.js",
         "js/tabelasVariadas.js",
+        "js/confirmacaoSaida.js",
         "js/tabelasJanelaForum.js"
       ],
       "matches": ["https://sig.ifsudestemg.edu.br/*"]

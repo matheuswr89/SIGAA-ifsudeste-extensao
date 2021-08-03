@@ -99,6 +99,29 @@ if (TURMAS_PORTAL != null) {
     }
     conteudoAtividades += `</div>`;
   }
+  if (proximas > 0) {
+    conteudoAtividades += `
+      <div class="kanban-block" id="prox">
+        <strong>Próximas Atividades</strong>
+    `;
+    for (let i = 0; i < arrayAtividades.length; i++) {
+      if (arrayAtividades[i][0] != null && arrayAtividades[i][0] == "") {
+        conteudoAtividades += `
+          <div class="task" onclick="${
+            arrayAtividades[i][3].querySelector("a") != null
+              ? arrayAtividades[i][3].querySelector("a").getAttribute("onclick")
+              : null
+          }">
+            <p class="datas-task">${arrayAtividades[i][1]} - ${
+          arrayAtividades[i][2]
+        }</p>
+            ${arrayAtividades[i][3].innerHTML}
+        </div>
+      `;
+      }
+    }
+    conteudoAtividades += `</div>`;
+  }
   if (enviados > 0) {
     conteudoAtividades += `
       <div class="kanban-block" id="done">
@@ -119,38 +142,14 @@ if (TURMAS_PORTAL != null) {
           arrayAtividades[i][2]
         }</p>
             ${arrayAtividades[i][3].innerHTML}
-          </div>
+        </div>
       `;
       }
     }
     conteudoAtividades += `</div>`;
   }
 
-  if (proximas > 0) {
-    conteudoAtividades += `
-      <div class="kanban-block" id="prox">
-        <strong>Próximas Atividades</strong>
-    `;
-    for (let i = 0; i < arrayAtividades.length; i++) {
-      if (arrayAtividades[i][0] != null && arrayAtividades[i][0] == "") {
-        conteudoAtividades += `
-          <div class="task" onclick="${
-            arrayAtividades[i][3].querySelector("a") != null
-              ? arrayAtividades[i][3].querySelector("a").getAttribute("onclick")
-              : null
-          }">
-            <p class="datas-task">${arrayAtividades[i][1]} - ${
-          arrayAtividades[i][2]
-        }</p>
-            ${arrayAtividades[i][3].innerHTML}
-          </div>
-      `;
-      }
-    }
-    conteudoAtividades += `</div>`;
-  }
-
-  conteudoAtividades += `</div>`;
+  conteudoAtividades += `</div></div>`;
   $("#avaliacao-portal").append(conteudoAtividades);
   $("#avaliacao-portal").append(LINK);
   TABELA_ATIVIDADES.style.display = "none";

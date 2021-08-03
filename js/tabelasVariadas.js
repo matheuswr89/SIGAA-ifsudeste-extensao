@@ -17,7 +17,11 @@ if (TURMAS_PORTAL == null && TABELAS_VARIADAS != null) {
       arrayConteudo.push(array);
     }
     let passou = 0;
-    if (!arrayTitulos[0].includes("Mensagem")) {
+    if (
+      TABELAS_VARIADAS.querySelector("fieldset > legend").textContent.includes(
+        "Tarefas"
+      )
+    ) {
       for (let i = 0; i < arrayConteudo.length; i++) {
         if (arrayConteudo[i][0].getAttribute("class") != null) {
           if (arrayConteudo[i][0].getAttribute("class").includes("first")) {
@@ -48,9 +52,18 @@ if (TURMAS_PORTAL == null && TABELAS_VARIADAS != null) {
     }
     let conteudoTabelaForum = `<div class="card-section">`;
     for (let i = 0; i < arrayConteudo.length; i++) {
-      conteudoTabelaForum += `
-    <div class="card">
-    `;
+      if (arrayConteudo[i][0].querySelector("img") != null) {
+        if (
+          arrayConteudo[i][0]
+            .querySelector("img")
+            .getAttribute("src")
+            .includes("/sigaa/ava/img/accept.png")
+        )
+          conteudoTabelaForum += `
+            <div class="card" style="background:#1dd1a1;">
+            `;
+      } else conteudoTabelaForum += `<div class="card">`;
+
       if (passou > 0) {
         conteudoTabelaForum += `<div class="card-container">`;
       } else {

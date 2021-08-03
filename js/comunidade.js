@@ -23,16 +23,16 @@ if (TURMAS_PORTAL != null) {
   let conteudoComunidade = `
   <div class="conteudoComunidade">
   <h4>${TABELA_COMUNIDADES.querySelector("h4").innerHTML}</h4>
-  <div class="container-comunidade">`;
+  <div class="card-section">`;
   for (let i = 0; i < arrayComunidades.length; i++) {
     let comunidade = arrayComunidades[i];
     if (comunidade != null) {
       conteudoComunidade += `
-      <div class="card-comunidade" onclick="${comunidade.getAttribute(
+      <div class="card" onclick="${comunidade.getAttribute(
         "onclick"
       )}">
-        <div class="container-card-comunidade">
-        <p class="link"><strong>${comunidade.innerHTML}</strong></p>
+        <div class="card-container">
+          <p class="link"><strong>${comunidade.innerHTML}</strong></p>
         </div>
       </div>
   `;
@@ -53,63 +53,26 @@ if (TURMAS_PORTAL != null) {
   <div class="links-forum">${
     TABELA_FORUM.querySelector("center").innerHTML
   }</div>
-  <div class="container-forum" >`;
+  <div class="card-section" >`;
   for (let i = 0; i < arrayForuns.length; i++) {
     let forums = arrayForuns[i];
     if (forums != null) {
       conteudoForum += `
-      <div class="card-comunidade" onclick="${forums[0].getAttribute(
+      <div class="card" onclick="${forums[0].getAttribute(
         "onclick"
       )}">
-        <div class="container-card-comunidade">
+        <div class="card-container">
           <p class="link"><strong>${forums[0].innerHTML}</strong></p>
-          <p><span>Autor:</span> ${forums[1]}</p>
-          <p><span>Data:</span> ${forums[3]}</p>
-          <p><span>Respostas:</span> ${forums[2]}</p> 
+          <p><b>Autor:</b> ${forums[1]}</p>
+          <p><b>Data:</b> ${forums[3]}</p>
+          <p><b>Respostas:</b> ${forums[2]}</p> 
         </div>
       </div>
   `;
     }
   }
   conteudoForum += `</div></div>`;
-
   let criaDiv = `
-    <style>
-      .div-comunidades-foruns{ 
-        margin-top: 10px;
-        padding: 15px;
-        height: 330px;
-        margin-left: 5px;
-      }
-      .div-comunidades-foruns, .container-forum,.container-comunidade{
-        background: rgb(239,243,250);
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .conteudoForum, .conteudoComunidade{
-        overflow: auto;
-        height: 300px;
-      }
-      .conteudoForum::-webkit-scrollbar, .conteudoComunidade::-webkit-scrollbar {
-        width: 5px;
-      }
-      .conteudoForum::-webkit-scrollbar-track, .conteudoComunidade::-webkit-scrollbar-track {
-        background: #FFF;
-        border-radius: 20px;
-      }
-      .conteudoForum::-webkit-scrollbar-thumb, .conteudoComunidade::-webkit-scrollbar-thumb {
-        background-color: #A9A9A9;
-        border-radius: 20px;
-      }
-      .links-forum{
-        display: grid;
-        text-align: center;
-      }
-      .conteudoComunidade, .conteudoForum{
-        width: 50% !important;
-      }
-    </style>
     <div class="div-comunidades-foruns">
       ${conteudoComunidade}
       ${conteudoForum}

@@ -26,7 +26,6 @@ Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste
 <li>Baixe a extensão nas lojas:
   <ul>
     <li>Firefox: <a href="https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/">acessar</a></li>
-    <li>Chrome: esperando aprovação</li>
+    <li>Chrome: <a href="https://chrome.google.com/webstore/detail/sigaa-ifsudeste-mg/beadbogpcinefmgiilnogaplgchelene">acessar</a></li>
   </ul>
 </li>
-<h3>OBS.: ESTÁ EM DESENVOLVIMENTO</h3>

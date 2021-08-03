@@ -41,23 +41,22 @@ if (TURMAS_PORTAL != null) {
         <div class="ultimas-atualizacoes-card">
         <p><b>Ultimas atualizações: </b></p>
         `;
-      let passou = true;
+      let passou = 0;
       for (let j = 0; j < arrayAtualizacoes.length; j++) {
         if (nomeDisciplina === arrayAtualizacoes[j][0]) {
           conteudo += `
           <p>${arrayAtualizacoes[j][2]} - ${arrayAtualizacoes[j][1]}</p>
           `;
-        } else {
-          passou = false;
+          passou++;
         }
       }
-      if (passou === false) {
+      if (passou == 0) {
         conteudo += `<p>Nada por aqui!</p>`;
       }
       conteudo += `</div></div></div>`;
     }
   }
-  conteudo += `</div><p class="span-turmas-anteriores">${TURMAS_PORTAL.children[4].innerHTML}</p>`;
+  conteudo += `</div><p class="mais">${TURMAS_PORTAL.children[4].innerHTML}</p>`;
   $("#turmas-portal").append(conteudo);
   TURMAS_PORTAL.children[1].style.display = "none";
   TURMAS_PORTAL.children[2].style.display = "none";
