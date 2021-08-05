@@ -1,5 +1,7 @@
 const css = `
 <script src="https://kit.fontawesome.com/31627fcb57.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <style>
 #main-docente{
   width: 100%;
@@ -17,6 +19,12 @@ const css = `
 }
 .conteudoComunidade h4{
   text-transform: uppercase;
+}
+.flickity-page-dots{
+  display: none;
+}
+.carousel-cell{
+  width: 300px !important;
 }
 .div-comunidades-foruns{ 
   margin-top: 10px;
@@ -256,8 +264,12 @@ li.modal-li-iframe:hover{
   font-family: sans-serif;
 }
 .kanban-block {
+  padding: 0.6rem;
   width: 20.5%;
   border-radius: 0.3rem;
+}
+.kanban-block strong, .kanban-block p{
+  font-size: 12px;
 }
 #todo, #inprogress, #done, #prox{
   height: 300px;
@@ -277,7 +289,7 @@ li.modal-li-iframe:hover{
   border-radius: 20px;
 }
 #todo .task{
-  background-color: #87cefa;
+  background-color: #C0C0C0;
 }
 #inprogress .task{
   background-color: #eccc68;
@@ -286,7 +298,7 @@ li.modal-li-iframe:hover{
   background-color: #1dd1a1;
 }
 #prox .task{
-  background-color: #C0C0C0;
+  background-color: #87cefa;
 }
 .task {
   cursor: pointer;
@@ -339,6 +351,23 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   align-items: center;
   visibility: hidden;
 }
+#aviso-navbar{
+  width: 20vw;
+  height: 10vh;
+  background-color: rgb(0,250,154);
+  border-radius: 4px;
+  border: 2px solid #008000;
+  box-shadow: 0 0 1px red;
+  position: fixed;
+  z-index: 100;
+  top: 4vh;
+  right: 1vw;
+  text-align: center;
+  font-size: 120%;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
 #fechar-aviso-tempo-sessao{
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
@@ -348,14 +377,22 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   margin: 1vw;
   padding: 0.5vh 1vh;
 }
-#fechar-aviso-tempo-sessao:hover{
+#fechar-aviso-navbar{
+  background-color: rgb(0,250,154);
+  border-radius: 4px;
+  border: 2px solid #008000;
+  cursor: pointer;
+  margin: 1vw;
+  padding: 0.5vh 1vh;
+}
+#fechar-aviso-tempo-sessao:hover, #fechar-aviso-navbar:hover{
   opacity: 0.7;
 }
 /* 
 ===============================================================
 Modal Confirmação
 */
-#modal-sair-confirmacao {
+#modal-sair-confirmacao, #modal-envio-confirmacao {
   width: 100vw;
   height: 100vw;
   background-color: rgba(200, 200, 200, 0.6);
@@ -365,7 +402,7 @@ Modal Confirmação
   top: 0;
   left: 0;
 }
-#modal-sair-confirmacao > div {
+#modal-sair-confirmacao > div , #modal-envio-confirmacao > div {
   opacity: 1;
   background-color: rgb(196, 210, 235);
   color: black;
@@ -379,7 +416,7 @@ Modal Confirmação
   flex-direction: column;
   justify-content: space-around;
 }
-#msg-sair-confirmacao{
+#msg-sair-confirmacao, #msg-envio-confirmacao{
   font-size: 120%;
   display: flex;
   align-items: center;
@@ -387,12 +424,12 @@ Modal Confirmação
   justify-content: center;
   border-bottom: 1px solid rgb(64, 78, 130);
 }
-#sair-buttons{
+#sair-buttons, #enviar-buttons{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   opacity: 0.7;
 }
-#sair-buttons button{
+#sair-buttons button, #enviar-buttons button{
   width: 25%;
   height: 5vh;
   margin: 0 0.5vw;
@@ -400,19 +437,24 @@ Modal Confirmação
   border-radius: 5px;
   opacity: 1;
 }
-#sair-buttons > button:hover{
+#sair-buttons > button:hover, #enviar-buttons > button:hover{
   opacity: 0.7;
 }
-#sair-buttons #confirmar-sair-button{
+#sair-buttons #confirmar-sair-button {
   background-color: rgba(255, 110, 110, 0.7);
-  border: 2px solid rgba(255, 60, 60, 1);
+  border: 1px solid rgba(255, 60, 60, 1);
   box-shadow: 0 0 1px red;
 }
-#sair-buttons #cancelar-sair-button{
-  background-color: rgba(201, 215, 255);
-  border: 2px solid rgb(64, 78, 130);
+#enviar-buttons #confirmar-envio-button {
+  background-color: rgba(85, 230, 160, 0.4);
+  border: 1px solid rgb(64, 130, 78);
   box-shadow: 0 0 1px blue;
-}         
+}
+#sair-buttons #cancelar-sair-button, #enviar-buttons #cancelar-envio-button{
+  background-color: rgba(85, 160, 230, 0.4);
+  border: 1px solid rgb(64, 78, 130);
+  box-shadow: 0 0 1px blue;
+}       
 </style>
 `;
 $(ALL).append(css);

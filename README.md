@@ -3,6 +3,13 @@ Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste
 </br>
 <h2>Modo de uso</h2>
 <h3>1º Opção:</h3>
+<li>Baixe a extensão nas lojas:
+  <ul>
+    <li>Firefox: <a href="https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/">acessar</a></li>
+    <li>Chrome: <a href="https://chrome.google.com/webstore/detail/sigaa-ifsudeste-mg/beadbogpcinefmgiilnogaplgchelene">acessar</a></li>
+  </ul>
+</li>
+<h3>2º Opção:</h3>
 <li>Navegador Chrome:
   <ul>
     <li>Baixe o repositório: <a href="https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/archive/refs/heads/main.zip">Baixar</a></li>
@@ -20,12 +27,5 @@ Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste
     <li>Arraste o arquivo para o navegador Firefox.</li>
     <li>Depois clique em adicionar.</li>
     <li>Entre no <a href="https://sig.ifsudestemg.edu.br">SIGAA</a> e veja a magica acontecer.</li>
-  </ul>
-</li>
-<h3>2º Opção:</h3>
-<li>Baixe a extensão nas lojas:
-  <ul>
-    <li>Firefox: <a href="https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/">acessar</a></li>
-    <li>Chrome: <a href="https://chrome.google.com/webstore/detail/sigaa-ifsudeste-mg/beadbogpcinefmgiilnogaplgchelene">acessar</a></li>
   </ul>
 </li>

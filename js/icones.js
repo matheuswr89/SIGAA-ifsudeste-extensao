@@ -1,23 +1,30 @@
 //Diminui a fonte na pagina de uma disciplina
 if (ALL[0].querySelector("#baseLayout") != null) {
   ALL[0].style.fontSize = "0.7em";
+
+  if (ALL[0].querySelector("#menuDropDown") != null) {
+    let imas = ALL[0].querySelector("#menuDropDown").querySelectorAll("img");
+    for (let j = 0; j < imas.length; j++) {
+      console.log(imas[j]);
+      if (imas[j].getAttribute("src").includes("/sigaa/ava/img/page_white_put.png")) {
+        let parent = imas[j].parentNode;
+        imas[j].setAttribute(
+          "src",
+          "https://img.icons8.com/color-glass/16/000000/statistics.png"
+        );
+      }
+    }
+  }
+
   let images = ALL[0].querySelectorAll("img");
   for (let i = 0; i < images.length; i++) {
-    if (
-      images[i].getAttribute("src").includes("/sigaa/img/view.gif") ||
-      images[i]
-        .getAttribute("src")
-        .includes("/sigaa/ava/img/page_white_put.png")
-    ) {
+    if (images[i].getAttribute("src").includes("/sigaa/img/view.gif") || images[i].getAttribute("src").includes("/sigaa/ava/img/page_white_put.png")) {
       let parent = images[i].parentNode;
       if (parent.getAttribute("class") != null) {
         if (parent.getAttribute("class").includes("infoAltRem")) {
           images[i].removeAttribute("src");
           images[i].setAttribute("class", "fas fa-download");
-          images[i].setAttribute(
-            "style",
-            "font-size: 1rem;padding: 0 5px 0 0;"
-          );
+          images[i].setAttribute("style", "font-size: 1rem;padding: 0 5px 0 0;");
         }
       } else {
         parent.removeChild(images[i]);
@@ -27,19 +34,13 @@ if (ALL[0].querySelector("#baseLayout") != null) {
       }
     }
     if (images[i].getAttribute("src") != null) {
-      if (
-        images[i].getAttribute("src").includes("/sigaa/ava/img/zoom.png") ||
-        images[i].getAttribute("src").includes("/sigaa/img/note.png")
-      ) {
+      if (images[i].getAttribute("src").includes("/sigaa/ava/img/zoom.png") || images[i].getAttribute("src").includes("/sigaa/img/note.png")) {
         let parent = images[i].parentNode;
         if (parent.getAttribute("class") != null) {
           if (parent.getAttribute("class").includes("infoAltRem")) {
             images[i].removeAttribute("src");
             images[i].setAttribute("class", "fas fa-eye");
-            images[i].setAttribute(
-              "style",
-              "font-size: 1rem;padding: 0 5px 0 0;"
-            );
+            images[i].setAttribute("style", "font-size: 1rem;padding: 0 5px 0 0;");
           }
         } else {
           parent.removeChild(images[i]);
@@ -50,20 +51,13 @@ if (ALL[0].querySelector("#baseLayout") != null) {
       }
     }
     if (images[i].getAttribute("src") != null) {
-      if (
-        images[i]
-          .getAttribute("src")
-          .includes("/sigaa/img/portal_turma/enviar_tarefa.png")
-      ) {
+      if (images[i].getAttribute("src").includes("/sigaa/img/portal_turma/enviar_tarefa.png")) {
         let parent = images[i].parentNode;
         if (parent.getAttribute("class") != null) {
           if (parent.getAttribute("class").includes("infoAltRem")) {
             images[i].removeAttribute("src");
             images[i].setAttribute("class", "fas fa-upload");
-            images[i].setAttribute(
-              "style",
-              "font-size: 1rem;padding: 0 5px 0 0;"
-            );
+            images[i].setAttribute("style", "font-size: 1rem;padding: 0 5px 0 0;");
           }
         } else {
           parent.removeChild(images[i]);
@@ -83,7 +77,7 @@ if (ALL[0].querySelector("#baseLayout") != null) {
     );
     for (let i = 0; i < turma.length; i++) {
       turma[i].style.backgroundImage =
-      "url(https://img.icons8.com/color-glass/48/000000/statistics.png)";
+        "url(https://img.icons8.com/color-glass/48/000000/statistics.png)";
       turma[i].style.backgroundSize = "15px 15px";
     }
   }

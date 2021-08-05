@@ -6,36 +6,31 @@ if (TURMAS_PORTAL != null) {
     arrayComunidades.push(comunidades.children[i].querySelector("a"));
   }
   let foruns = TABELA_FORUM.querySelector("form > table > tbody");
-  for (let i = 0; i < foruns.children.length; i++) {
-    let titulo = foruns.children[i]
-      .querySelectorAll("td")[0]
-      .querySelector("a");
-    let autor = foruns.children[i]
-      .querySelectorAll("td")[1]
-      .querySelector("acronym")
-      .getAttribute("title");
-    let respostas = foruns.children[i]
-      .querySelectorAll("td")[2]
-      .textContent.trim();
-    let data = foruns.children[i].querySelectorAll("td")[3].textContent.trim();
-    arrayForuns.push([titulo, autor, respostas, data]);
+  if (foruns != null) {
+    for (let i = 0; i < foruns.children.length; i++) {
+      let titulo = foruns.children[i].querySelectorAll("td")[0].querySelector("a");
+      let autor = foruns.children[i].querySelectorAll("td")[1].querySelector("acronym").getAttribute("title");
+      let respostas = foruns.children[i].querySelectorAll("td")[2].textContent.trim();
+      let data = foruns.children[i].querySelectorAll("td")[3].textContent.trim();
+      arrayForuns.push([titulo, autor, respostas, data]);
+    }
   }
   let conteudoComunidade = `
   <div class="conteudoComunidade">
   <h4>${TABELA_COMUNIDADES.querySelector("h4").innerHTML}</h4>
-  <div class="card-section">`;
+  <div class="carousel" data-flickity='{ "groupCells": true }'>`;
   for (let i = 0; i < arrayComunidades.length; i++) {
     let comunidade = arrayComunidades[i];
     if (comunidade != null) {
       conteudoComunidade += `
-      <div class="card" onclick="${comunidade.getAttribute(
+      <div class="card carousel-cell" onclick="${comunidade.getAttribute(
         "onclick"
       )}">
-        <div class="card-container">
-          <p class="link"><strong>${comunidade.innerHTML}</strong></p>
-        </div>
+      <div class="card-container">
+      <p class="link"><strong>${comunidade.innerHTML}</strong></p>
       </div>
-  `;
+      </div>
+      `;
     }
   }
   conteudoComunidade += `</div>
@@ -53,12 +48,12 @@ if (TURMAS_PORTAL != null) {
   <div class="links-forum">${
     TABELA_FORUM.querySelector("center").innerHTML
   }</div>
-  <div class="card-section" >`;
+  <div class="carousel" data-flickity='{ "groupCells": true }'>`;
   for (let i = 0; i < arrayForuns.length; i++) {
     let forums = arrayForuns[i];
     if (forums != null) {
       conteudoForum += `
-      <div class="card" onclick="${forums[0].getAttribute(
+      <div class="card carousel-cell" onclick="${forums[0].getAttribute(
         "onclick"
       )}">
         <div class="card-container">
@@ -80,6 +75,16 @@ if (TURMAS_PORTAL != null) {
   `;
 
   $(CONTEUDO).append(criaDiv);
+  if (arrayComunidades.length <= 1) {
+    let carousel = CONTEUDO.querySelectorAll(".carousel");
+    carousel[1].removeAttribute("data-flickity");
+    carousel[1].setAttribute("data-flickity", '{ "groupCells": true, "prevNextButtons": false }');
+  }
+  if (arrayForuns.length <= 1) {
+    let carousel = CONTEUDO.querySelectorAll(".carousel");
+    carousel[2].removeAttribute("data-flickity");
+    carousel[2].setAttribute("data-flickity", '{ "groupCells": true, "prevNextButtons": false }');
+  }
   TABELA_COMUNIDADES.style.display = "none";
   TABELA_FORUM.style.display = "none";
 }

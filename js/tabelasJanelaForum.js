@@ -1,7 +1,5 @@
 if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
-  let tabelas = TABELAS_JANELA_FORUM.querySelectorAll(
-    "fieldset > table.listing"
-  );
+  let tabelas = TABELAS_JANELA_FORUM.querySelectorAll("fieldset > table.listing");
   if (tabelas.length >= 2) {
     let tabela1 = tabelas[0],
       tabela2 = tabelas[1];
@@ -22,18 +20,15 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
         }
         arrayConteudoTabela1.push(array);
       }
-      let conteudoTabela1 = `<div class="card-section">`;
+      let conteudoTabela1 = `<div class="carousel" data-flickity='{ "groupCells": true }'>`;
       for (let i = 0; i < arrayConteudoTabela1.length; i++) {
         conteudoTabela1 += `
-      <div class="card">
+      <div class="card carousel-cell">
       `;
         for (let j = 0; j < arrayTitulosTabela1.length; j++) {
           let a;
           if (arrayConteudoTabela1[i][2].innerText != undefined) {
-            a =
-              arrayConteudoTabela1[i][2].getAttribute("onclick") != null
-                ? arrayConteudoTabela1[i][2]
-                : null;
+            a = arrayConteudoTabela1[i][2].getAttribute("onclick") != null ? arrayConteudoTabela1[i][2] : null;
           }
           conteudoTabela1 += `
             <div class="card-container" onclick="${
@@ -44,9 +39,7 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
               }</b>
               ${
                 arrayConteudoTabela1[i][j].innerText != undefined
-                  ? arrayConteudoTabela1[i][j].innerText.trim() == ""
-                    ? "Nada aqui!"
-                    : arrayConteudoTabela1[i][j].innerHTML
+                  ? arrayConteudoTabela1[i][j].innerHTML
                   : arrayConteudoTabela1[i][j]
               }
               </p>  
@@ -60,6 +53,11 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
       conteudoTabela1 += `</div>`;
       tabela1.style.display = "none";
       $(TABELAS_JANELA_FORUM[1]).append(conteudoTabela1);
+      if (arrayConteudoTabela1.length <= 1) {
+        let carousel = TABELAS_JANELA_FORUM[1].querySelector(".carousel");
+        carousel.removeAttribute("data-flickity");
+        carousel.setAttribute("data-flickity",'{ "groupCells": true, "prevNextButtons": false }');
+      }
     }
 
     if (tabela2 != null) {
@@ -79,18 +77,15 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
         }
         arrayConteudoTabela2.push(array);
       }
-      let conteudoTabela2 = `<div class="card-section">`;
+      let conteudoTabela2 = `<div class="carousel" data-flickity='{ "groupCells": true }'>`;
       for (let i = 0; i < arrayConteudoTabela2.length; i++) {
         conteudoTabela2 += `
-      <div class="card">
+      <div class="card carousel-cell">
       `;
         for (let j = 0; j < arrayTitulosTabela2.length; j++) {
           let a;
           if (arrayConteudoTabela2[i][2].innerText != undefined) {
-            a =
-              arrayConteudoTabela2[i][2].getAttribute("onclick") != null
-                ? arrayConteudoTabela2[i][2]
-                : null;
+            a = arrayConteudoTabela2[i][2].getAttribute("onclick") != null ? arrayConteudoTabela2[i][2] : null;
           }
           conteudoTabela2 += `
             <div class="card-container" onclick="${
@@ -101,9 +96,7 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
               }</b>
               ${
                 arrayConteudoTabela2[i][j].innerText != undefined
-                  ? arrayConteudoTabela2[i][j].innerText.trim() == ""
-                    ? "Nada aqui!"
-                    : arrayConteudoTabela2[i][j].innerHTML
+                  ? arrayConteudoTabela2[i][j].innerHTML
                   : arrayConteudoTabela2[i][j]
               }
               </p>  
@@ -117,6 +110,11 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
       conteudoTabela2 += `</div>`;
       tabela2.style.display = "none";
       $(TABELAS_JANELA_FORUM[2]).append(conteudoTabela2);
+      if (arrayConteudoTabela2.length <= 1) {
+        let carousel = TABELAS_JANELA_FORUM[2].querySelector(".carousel");
+        carousel.removeAttribute("data-flickity");
+        carousel.setAttribute("data-flickity", '{ "groupCells": true, "prevNextButtons": false }');
+      }
     }
   }
 }

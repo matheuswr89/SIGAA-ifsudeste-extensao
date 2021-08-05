@@ -2,18 +2,15 @@
 ALL[0].style.fontSize = "100%";
 ALL[0].style.background = "#FFF";
 if (CONTAINER != null) {
-  CABECALHO.style.position = "sticky !important";
   CONTAINER.style.width = "100%";
-  if (TURMAS_PORTAL == null) {
-    CONTAINER.style.minHeight = "100vh";
+  if (CONTAINER.scrollHeight <= 1100) {
     CONTEUDO.style.marginTop = "30px";
-    RODAPE.style.bottom = "0";
-    if(window.pageYOffset==0)
-      RODAPE.style.position = "absolute";
+    CONTAINER.style.minHeight = "100vh";
+    RODAPE.style.position = "absolute";
     RODAPE.style.width = "100%";
-  } else {
+  }
+  if (TURMAS_PORTAL != null) {
     CONTAINER.style.height = "100%";
-    INFO_USUARIO.style.float = "none !important";
     NOTICIAS.remove();
   }
   CONTAINER.style.fontSize = "70%";

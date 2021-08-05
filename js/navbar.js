@@ -25,49 +25,63 @@ if (ALL[0].querySelector("#baseLayout") == null) {
                 }</li>
                 ${
                   menu != null
-                    ? `<li class="modal-li" id="myBtn">Acessar Area do Aluno</li>`
+                    ? `<li class="modal-li" id="myBtnModal">Acessar Area do Aluno</li>`
                     : ""
                 }
             </ul>
         </nav>
     </div>
-    <div id="myModal" class="modal">
+    <div id="myModalAluno" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         ${TURMAS_PORTAL != null ? PERFIL_DOCENTE.innerHTML : ""}
       </div>
     </div>  
-`;
-    $("body").append(conteudoNavbar);
-    $("body").append(CONTAINER);
+    `;
+    $(ALL[0]).append(conteudoNavbar);
+    $(ALL[0]).append(CONTAINER);
     if (TURMAS_PORTAL != null) {
       PERFIL_DOCENTE.style.display = "none";
-      let modal = document.getElementById("myModal");
-      let btn = document.getElementById("myBtn");
+      let modal = document.getElementById("myModalAluno");
+      let myBtn = document.getElementById("myBtnModal");
       let span = document.getElementsByClassName("close")[0];
 
-      btn.onclick = function () {
+      myBtn.onclick = function () {
         modal.style.display = "block";
       };
       span.onclick = function () {
         modal.style.display = "none";
       };
-
-      window.onclick = function (event) {
-        if (event.target == modal) {
+      $(CONTAINER).append(`
+        <div id="aviso-navbar">
+            <p>Clique fora do menu para fecha-lo!<p>
+            <button id="fechar-aviso-navbar"><strong>X</strong></button>
+        </div>`);
+      
+      let botaoNavbar = document.getElementById("btn");
+      let sidebar = document.getElementsByClassName("navbar-wrapper")[0];
+      botaoNavbar.addEventListener("change", (event) => {
+        if (event.currentTarget.checked) {
+          $("#aviso-navbar").css("visibility", "visible");
+        }
+        setTimeout(function () {
+          $("#aviso-navbar").css("visibility", "hidden");
+        }, 5000);
+      });
+      $("#fechar-aviso-navbar").click(function () {
+        $("#aviso-navbar").css("visibility", "hidden");
+      });
+      window.onclick = function (e) {
+        if (e.target == modal) {
           modal.style.display = "none";
+        }
+        if (e.target != sidebar && e.target != botaoNavbar) {
+          if (botaoNavbar.checked == true) {
+            botaoNavbar.checked = false;
+          }
         }
       };
     }
-    let botaoNavbar = document.getElementById("btn");
-    CONTAINER.onclick = function (e) {
-      if (e.target !== this) {
-        if (botaoNavbar.checked == true) {
-          botaoNavbar.checked = false;
-        }
-      }
-    };
-
     MENU_USUARIO.style.display = "none";
   }
 }
