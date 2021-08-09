@@ -42,7 +42,7 @@ if (TURMAS_PORTAL == null && TABELAS_VARIADAS != null) {
         }
       }
     }
-    let conteudoTabelaForum = `<div class="carousel" data-flickity='{ "groupCells": true }'>`;
+    let conteudoTabelaForum = `<div class="carousel" data-flickity='{ "groupCells": true, "adaptiveHeight": true }'>`;
     for (let i = 0; i < arrayConteudo.length; i++) {
       if (arrayConteudo[i][0].querySelector("img") != null) {
         if (arrayConteudo[i][0].querySelector("img").getAttribute("src").includes("/sigaa/ava/img/accept.png"))

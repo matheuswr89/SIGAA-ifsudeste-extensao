@@ -22,8 +22,8 @@ Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste
 </li>
 <li>Navegador Firefox
   <ul>
-    <li>Baixe o arquivo de extensão: <a href="https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/raw/master/firefox/sigaa_ifsudeste_mg-1.9-fx.xpi">Baixar</a></li>
-    <li>Localize o arquivo na pasta <b>"Download"</b> do seu sistema operacional, o arquivo vai estar nomeado como <b>"sigaa_ifsudeste_mg-1.9-fx.xpi"</b>.</li>
+    <li>Baixe o arquivo de extensão: <a href="https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/raw/master/firefox/sigaa_ifsudeste_mg-2.0-fx.xpi">Baixar</a></li>
+    <li>Localize o arquivo na pasta <b>"Download"</b> do seu sistema operacional, o arquivo vai estar nomeado como <b>"sigaa_ifsudeste_mg-2.0-fx.xpi"</b>.</li>
     <li>Arraste o arquivo para o navegador Firefox.</li>
     <li>Depois clique em adicionar.</li>
     <li>Entre no <a href="https://sig.ifsudestemg.edu.br">SIGAA</a> e veja a magica acontecer.</li>

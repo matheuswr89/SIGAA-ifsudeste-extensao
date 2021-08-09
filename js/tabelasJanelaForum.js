@@ -20,7 +20,7 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
         }
         arrayConteudoTabela1.push(array);
       }
-      let conteudoTabela1 = `<div class="carousel" data-flickity='{ "groupCells": true }'>`;
+      let conteudoTabela1 = `<div class="carousel" data-flickity='{ "groupCells": true, "adaptiveHeight": true }'>`;
       for (let i = 0; i < arrayConteudoTabela1.length; i++) {
         conteudoTabela1 += `
       <div class="card carousel-cell">
@@ -77,7 +77,7 @@ if (TURMAS_PORTAL == null && TABELAS_JANELA_FORUM != null) {
         }
         arrayConteudoTabela2.push(array);
       }
-      let conteudoTabela2 = `<div class="carousel" data-flickity='{ "groupCells": true }'>`;
+      let conteudoTabela2 = `<div class="carousel" data-flickity='{ "groupCells": true, "adaptiveHeight": true }'>`;
       for (let i = 0; i < arrayConteudoTabela2.length; i++) {
         conteudoTabela2 += `
       <div class="card carousel-cell">

@@ -18,7 +18,7 @@ if (TURMAS_PORTAL != null) {
   let conteudoComunidade = `
   <div class="conteudoComunidade">
   <h4>${TABELA_COMUNIDADES.querySelector("h4").innerHTML}</h4>
-  <div class="carousel" data-flickity='{ "groupCells": true }'>`;
+  <div class="carousel" data-flickity='{ "groupCells": true, "adaptiveHeight": true }'>`;
   for (let i = 0; i < arrayComunidades.length; i++) {
     let comunidade = arrayComunidades[i];
     if (comunidade != null) {
@@ -48,7 +48,7 @@ if (TURMAS_PORTAL != null) {
   <div class="links-forum">${
     TABELA_FORUM.querySelector("center").innerHTML
   }</div>
-  <div class="carousel" data-flickity='{ "groupCells": true }'>`;
+  <div class="carousel" data-flickity='{ "groupCells": true, "adaptiveHeight": true }'>`;
   for (let i = 0; i < arrayForuns.length; i++) {
     let forums = arrayForuns[i];
     if (forums != null) {

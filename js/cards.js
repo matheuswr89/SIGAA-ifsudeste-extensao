@@ -1,5 +1,5 @@
 if (TURMAS_PORTAL != null) {
-  let conteudo = `<div class="carousel" data-flickity='{ "groupCells": true }'>`;
+  let conteudo = `<div class="carousel" data-flickity='{ "groupCells": true, "adaptiveHeight": true }'>`;
 
   let arrayAtualizacoes = [];
   let tabelaAtualizacoes =
