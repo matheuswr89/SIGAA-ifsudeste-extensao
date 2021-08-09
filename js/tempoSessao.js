@@ -21,9 +21,6 @@ $(document).ready(function () {
         if (minutosRestantes == 5 || minutosRestantes == 1) {
           $("#aviso-tempo-sessao").css("visibility", "visible");
         }
-        setTimeout(function () {
-          $("#aviso-tempo-sessao").css("visibility", "hidden");
-        }, 100000);
       }
     });
 
