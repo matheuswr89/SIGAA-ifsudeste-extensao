@@ -1,6 +1,6 @@
 {
   "name": "SIGAA IFSUDESTE-MG",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Melhorias de UI/UX no SIGAA da IFSUDESTE-MG",
   "content_scripts": [
     {
