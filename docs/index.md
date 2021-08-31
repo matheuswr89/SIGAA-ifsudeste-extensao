@@ -18,7 +18,7 @@
  5. Troca de posição dos botões **Enviar** e **Cancelar**; 
 
 #### Para mais detalhes veja o vídeo abaixo:
-<video width="820" height="440" controls>
+<video width="720" height="440" controls>
   <source src="./video/video.mp4" type="video/mp4">
   <source src="./video/video.mp4" type="video/ogg">
   Your browser does not support the video tag.
