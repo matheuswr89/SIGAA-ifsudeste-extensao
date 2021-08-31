@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+### Features
+- Repaginação da página inicial:
+ 1. Cards para as disciplinas, foruns e comunidades;
+ 2. Kanban para melhor organizar as atividades;
+ 3. Navbar escondido;
+ 4. Modal para ver os dados do estudante;
 
-You can use the [editor on GitHub](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+- Repaginação da página de uma disciplina:
+ 1. Troca de alguns icones, como por exemplo o de **Estatística**, **Baixar**, **Visualizar**;
+ 2. Cards para as seções **Atividades**, **Materiais**, **Fóruns**, etc;
+ 3. Quando tiver um vídeo do YouTube, irá automaticamente esconder eles em um modal, que poderá ser aberto clicando em **Abrir video**;
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Repaginação geral:
+ 1. Os conteudos agora ocupam a tela inteira;
+ 2. A fonte de alguns elementos foram aumentadas;
+ 3. Mensagem de confirmação de uma ação;
+ 4. Aviso de sessão acabando;
+ 5. Troca de posição dos botões **Enviar** e **Cancelar**; 
 
-### Markdown
+#### Para mais detalhes veja o vídeo abaixo:
+![Video](./video/video.mp4)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Modo de uso
 
+#### 1º Opção:
+- Baixe a extensão nas lojas:
+    1. Firefox: [acessar](https://addons.mozilla.org/pt-BR/firefox/addon/sigaa-ifsudeste-mg/)
+    2. Chrome: [acessar](https://chrome.google.com/webstore/detail/sigaa-ifsudeste-mg/beadbogpcinefmgiilnogaplgchelene)
+
+#### 2º Opção:
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- Navegador Chrome:
+  1. Baixe o repositório: [Baixar](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/archive/refs/heads/main.zip)
+    2. Descompacte a pasta.
+    3. No navegador habilite o modo desenvolvedor em **Exenstoes ➙ Modo desenvolvedor**.
+    4. Depois clique na opção **"Carregar sem pacote"**.
+    5. Abra a pasta descompactada no segundo passo.
+    6. Entre no [SIGAA](https://sig.ifsudestemg.edu.br) e veja a magica acontecer.
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```markdown
+- Navegador Firefox
+  1. Baixe o arquivo de extensão: [Baixar](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/raw/master/firefox/sigaa_ifsudeste_mg-2.0-fx.xpi)
+    2. Localize o arquivo na pasta **"Download"** do seu sistema operacional, o arquivo vai estar nomeado como **"sigaa_ifsudeste_mg-2.0-fx.xpi"**.
+    3. Arraste o arquivo para o navegador Firefox.
+    4. Depois clique em adicionar.
+    5. Entre no [SIGAA](https://sig.ifsudestemg.edu.br) e veja a magica acontecer.
+```
