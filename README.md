@@ -1,7 +1,8 @@
 <h2>SIGAA-ifsudeste-extensao</h2>
 Trabalho pratico da disciplina de Linguagem de Programação Visual que consiste em desenvolver uma extensão para o navegador Google Chrome, que terá como objetivo aprimorar a UI e a UX do front-end da plataforma SIGAA (versão web desktop).
 
-Página de apresentação: <a href="https://matheuswr89.github.io/SIGAA-ifsudeste-extensao/">acessar</a></li>
+
+<li>Página de apresentação: <a href="https://matheuswr89.github.io/SIGAA-ifsudeste-extensao/">acessar</a></li>
 </br>
 <h2>Modo de uso</h2>
 <h3>1º Opção:</h3>
