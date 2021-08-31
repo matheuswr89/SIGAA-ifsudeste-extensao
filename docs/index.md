@@ -32,7 +32,6 @@
     2. Chrome: [acessar](https://chrome.google.com/webstore/detail/sigaa-ifsudeste-mg/beadbogpcinefmgiilnogaplgchelene)
 
 #### 2º Opção:
-```markdown
 - Navegador Chrome:
   1. Baixe o repositório: [Baixar](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/archive/refs/heads/main.zip)
     2. Descompacte a pasta.
@@ -40,12 +39,10 @@
     4. Depois clique na opção **"Carregar sem pacote"**.
     5. Abra a pasta descompactada no segundo passo.
     6. Entre no [SIGAA](https://sig.ifsudestemg.edu.br) e veja a magica acontecer.
-```
-```markdown
+
 - Navegador Firefox
   1. Baixe o arquivo de extensão: [Baixar](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/raw/master/firefox/sigaa_ifsudeste_mg-2.0-fx.xpi)
     2. Localize o arquivo na pasta **"Download"** do seu sistema operacional, o arquivo vai estar nomeado como **"sigaa_ifsudeste_mg-2.0-fx.xpi"**.
     3. Arraste o arquivo para o navegador Firefox.
     4. Depois clique em adicionar.
     5. Entre no [SIGAA](https://sig.ifsudestemg.edu.br) e veja a magica acontecer.
-```
