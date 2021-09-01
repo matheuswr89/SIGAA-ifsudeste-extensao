@@ -1,13 +1,10 @@
 {
   "name": "SIGAA IFSUDESTE-MG",
-  "version": "2.1",
+  "version": "2.2",
   "description": "Melhorias de UI/UX no SIGAA da IFSUDESTE-MG",
   "content_scripts": [
     {
       "js": [
-        "js/otherJS/firebase-app.js",
-        "js/otherJS/firebase-database.js",
-        "js/firebase.js",
         "js/otherJS/jquery-3.6.0.min.js",
         "js/selects.js",
         "js/css.js",

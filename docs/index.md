@@ -41,8 +41,8 @@
     6. Entre no [SIGAA](https://sig.ifsudestemg.edu.br) e veja a magica acontecer.
 
 - Navegador Firefox
-  1. Baixe o arquivo de extensão: [Baixar](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/raw/master/firefox/sigaa_ifsudeste_mg-2.0-fx.xpi)
-    2. Localize o arquivo na pasta **"Download"** do seu sistema operacional, o arquivo vai estar nomeado como **"sigaa_ifsudeste_mg-2.0-fx.xpi"**.
+  1. Baixe o arquivo de extensão: [Baixar](https://github.com/matheuswr89/SIGAA-ifsudeste-extensao/raw/master/firefox/sigaa_ifsudeste_mg-2.2-fx.xpi)
+    2. Localize o arquivo na pasta **"Download"** do seu sistema operacional, o arquivo vai estar nomeado como **"sigaa_ifsudeste_mg-2.2-fx.xpi"**.
     3. Arraste o arquivo para o navegador Firefox.
     4. Depois clique em adicionar.
     5. Entre no [SIGAA](https://sig.ifsudestemg.edu.br) e veja a magica acontecer.
