@@ -10,6 +10,13 @@ if (TURMAS_PORTAL != null) {
     for (let i = 0; i < tabelaAtividades.children.length; i++) {
       let atividades = tabelaAtividades.children[i];
       let tipo;
+      let valor = atividades.children[1].textContent
+        .replaceAll("\t", "")
+        .replaceAll("\n", "")
+        .split("(")[1];
+      let dia = 0;
+      if (valor !== undefined)
+        if (isNumber(valor.split(" ")[0])) dia = valor.split(" ")[0];
       if (atividades.children[0].querySelector("img") != null) {
         if (
           atividades.children[0]
@@ -31,6 +38,9 @@ if (TURMAS_PORTAL != null) {
           tipo = "verde";
           enviados++;
         }
+      } else if (dia > 7) {
+        tipo = "";
+        proximas++;
       } else {
         tipo = null;
         antigos++;
@@ -164,4 +174,8 @@ if (TURMAS_PORTAL != null) {
     $("#avaliacao-portal").append(LINK);
     TABELA_ATIVIDADES.style.display = "none";
   }
+}
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
 }
