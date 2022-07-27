@@ -15,3 +15,4 @@ const TABELA_FORUM = document.querySelector("#forum-portal");
 const TABELAS_VARIADAS = document.querySelector("#scroll-wrapper > form");
 const TABELAS_JANELA_FORUM = document.querySelector("#scroll-wrapper > fieldset > form");
 const RELATORIO = document.querySelector("#relatorio-paisagem-container");
+const RELATORIO2 = document.querySelector("#relatorio-container");

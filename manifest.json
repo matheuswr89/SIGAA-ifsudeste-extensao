@@ -6,6 +6,8 @@
     {
       "js": [
         "js/otherJS/jquery-3.6.0.min.js",
+        "js/otherJS/flickity.pkgd.min.js",
+        "js/otherJS/fontawesome.js",
         "js/selects.js",
         "js/css.js",
         "js/main.js",
@@ -22,6 +24,7 @@
         "js/confirmacaoSaida.js",
         "js/tabelasJanelaForum.js"
       ],
+      "css":["css/flickity.min.css"],
       "matches": ["https://sig.ifsudestemg.edu.br/*"]
     }
   ],
@@ -31,6 +34,11 @@
     "48": "imgs/xxhdpi.png",
     "128": "imgs/xxxhdpi.png"
   },
+  "content_security_policy": {
+    "script-src": "self unsafe-eval",
+    "unsafe-eval": "object-src self",
+    "unsafe-inline": "self"
+  },
   "author": "Turma de LPV 2021",
-  "manifest_version": 2
+  "manifest_version": 3
 }
